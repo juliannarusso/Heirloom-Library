@@ -3,7 +3,7 @@
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
-        <title> Admin View </title>
+        <title> Heirloom Orders </title>
         <link rel="stylesheet" href="styles.css">
     </head> 
     <body>
