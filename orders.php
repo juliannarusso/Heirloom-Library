@@ -3,7 +3,7 @@
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
-        <title> Heirloom Orders </title>
+        <title> Admin View </title>
         <link rel="stylesheet" href="styles.css">
     </head> 
     <body>
@@ -73,6 +73,21 @@ if ($r) {
 
 
 ?>
+            </div>
+        </div>
+            <div class="fixed-footer">
+                        <hr>
+                <div class="footer">
+                    <small class="info"><a href=""><u style="color: rgb(172, 62, 91);">HeirloomLibSupport@gmail.com</u></a></small>
+                    <ul>
+                        <li><a href="admin.php"><small><u>Administrator</u></small></a></li>
+                        <li><a href="customers.php"><small><u>Customers</u></small></a></li>
+                        <li><a href="creatingfaqs.html"><small><u>FAQ</u></small></a></li>
+                        <li><a href="disclaimer.html"><small><u>Disclaimer</u></small></a></li>
+                        <li><a href=""><small><u>Translate</u></small></a></li>
+                        <li><a href=""><small>(C) M. Ong</small></a></li>
+                    </ul>
+                </div>    
             </div>
         </header>
     </main>
