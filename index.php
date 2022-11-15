@@ -10,23 +10,10 @@
     /* Add some padding on document's body to prevent the content
     to go underneath the header and footer */
         .container{
-            width: 80%; 
+            width: 80%;
             margin: 0 auto; /* Center the DIV horizontally */
         }
-        .fixed-header, .fixed-footer{
-            width: 100%;
-            position: fixed;        
-            background:  #fff;
-            padding: 10px 0;
-            color: #fff;
-        }
-        .fixed-header{
-            top: 0;
-        }
-        .fixed-footer{
-            bottom: 0;
-        }    
-        /* Some more styles to beutify this example */
+        /* Some more styles to beautify this example */
         nav a {
             color: #fff;
             text-decoration: none;
@@ -36,58 +23,7 @@
         .container p{
             line-height: 200px; /* Create scrollbar to test positioning */
         }
-
-        .menu {
-            width: 95%;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .homebutton {
-            width: 120px;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        .menu ul li {
-            list-style: none;
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: rgb(172, 62, 91);
-        }
-
-        .footer {
-            width: 95%;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .info {
-            width: 120px;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        .footer ul li {
-            list-style: none;
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        .footer ul li a {
-            text-decoration: none;
-            color: rgba(172, 62, 91, 0.8);
-        }
-
+        
         .search {
             width: 100%;
             background: white;
@@ -124,7 +60,7 @@
             background-color: rgba(192, 62, 100, 0.1);
         }
 
-        body{        
+        body{
             padding-top: 70px;
             padding-bottom: 70px;
         }
@@ -172,23 +108,8 @@
 
 </head>
     <body>
-        <div class="fixed-header">
-            <div class="container">
-                <header>
-                    <div class="menu">
-                        <b class="homebutton"><a href="index.php"><u style="color: rgb(198, 32, 38);">Home</u></a></b>
-                        <ul>
-                            <li><a href="products.php" style = "color: rgb(198, 32, 38);">Products</a></li>
-                            <li><a href="sellers.php" style = "color: rgb(198, 32, 38);">Sellers</a></li>
-                            <li><a href="orders.php" style = "color: rgb(198, 32, 38);">Orders</a></li>
-                            <li><a href=""><u>Sign In</u></a></li>
-                            <li><a href=""><u>My Cart</u></a></li>
-                        </ul>
-                    </div>
-                </header>
-            </div>
-            <hr>
-        </div>
+
+        <?php include('header.php'); ?> <!-- Adds Header -->
 
         <div class="container">
     	    <main>
@@ -279,25 +200,11 @@
                 </table>
                 <br>
             </main>
-        </div>    
-
-
-        <div class="fixed-footer">
-            <hr>
-    <div class="footer">
-        <small class="info"><a href=""><u style="color: rgb(172, 62, 91);">HeirloomLibSupport@gmail.com</u></a></small>
-        <ul>
-            <li><a href="admin.php"><small><u>Administrator</u></small></a></li>
-            <li><a href="customers.php"><small><u>Customers</u></small></a></li>
-            <li><a href="creatingfaqs.html"><small><u>FAQ</u></small></a></li>
-            <li><a href="disclaimer.html"><small><u>Disclaimer</u></small></a></li>
-            <li><a href=""><small><u>Translate</u></small></a></li>
-            <li><a href=""><small>(C) A. O'Leary 2022, M. Ong, A. Riotto, J. Russo </small></a></li>
-        </ul>
-    </div>        
         </div>
 
-        
-    </body>
-</head>
+    <?php
+    define('FILE_AUTHOR', ''); #Defines Page Author, If Any Exists
+    include('footer.php');  #Adds Footer
+    ?>
+
 </html>
