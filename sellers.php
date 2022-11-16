@@ -3,27 +3,12 @@
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
-        <title> Admin View </title>
+        <title> Sellers View </title>
         <link rel="stylesheet" href="styles.css">
     </head> 
     <body>
-        <div class="fixed-header">
-            <div class="container">
-                <header>
-                    <div class="menu">
-                        <b class="homebutton"><a href="index.php"><u style="color: rgb(198, 32, 38);">Home</u></a></b>
-                        <ul>
-                            <li><a href="products.php">PRODUCTS</a></li>
-                            <li><a href="sellers.php">SELLERS</a></li>
-                            <li><a href="orders.php">ORDERS</a></li>
-                            <li><a href=""><u>Sign In</u></a></li>
-                            <li><a href=""><u>My Cart</u></a></li>
-                        </ul>
-                    </div>
-                </header>
-            </div>
-            <hr>
-        </div>
+        
+    <?php include "header.php"; ?>
 
         <div class="container">
     	    <main>
@@ -45,7 +30,7 @@
         <div class = "options">
 
 <?php
-
+define("FILE_AUTHOR", "A. Riotto");
 require "connect_db.php";
 $q = "SELECT * FROM t6_seller";
 $r = mysqli_query($dbc, $q);
@@ -81,11 +66,11 @@ if ($r) {
 
 ?>
             </div>
+        </div>
         </header>
     </main>
     </body>
-    <footer>
-		<br>
-		<small>(C) A Riotto, 2022</small>
-    </footer>
+    
+    <?php include "footer.php"; ?>
+    
 </html>
