@@ -5,111 +5,9 @@
 <head>
     <meta charset="utf-8">
     <title>Heirloom Library Home</title>
+    <link rel="stylesheet" href="styles.css">
 
-    <style>
-    /* Add some padding on document's body to prevent the content
-    to go underneath the header and footer */
-        .container{
-            width: 80%;
-            margin: 0 auto; /* Center the DIV horizontally */
-        }
-        /* Some more styles to beautify this example */
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 7px 25px;
-            display: inline-block;
-        }
-        .container p{
-            line-height: 200px; /* Create scrollbar to test positioning */
-        }
-        
-        .search {
-            width: 100%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-  
-        .listings {
-            width: 1100px;
-            color: black;
-            background-color: rgba(192, 62, 100, 0.1);
-            border-collapse: collapse;
-            font-weight: normal;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .listings th {
-            font-size: 15px;
-            font-weight: bold;
-            border: 6px solid white;
-            height: 1cm;
-        }
-
-        .listings td {
-            font-size: 15px;
-            padding-left: 25px;
-            padding-right: 25px;
-            border: 6px solid white;
-        }
-
-        .listings tr:nth-child(even) {
-            background-color: rgba(192, 62, 100, 0.1);
-        }
-
-        body{
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-
-        h1 {
-            color: rgb(182, 93, 116);
-        }
-
-        hr {
-            height: 2px;
-            background-color: rgb(182, 93, 116);
-            border: none;
-        }
-
-        table {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        form {
-            background: white;
-            width: 800px;
-            height: 40px;
-            display: flex;
-        }
-
-        form input {
-            width: 800px;
-            border-color: rgb(222, 62, 91);
-            padding-left: 15px;
-        }
-
-        form button {
-            background: rgb(192, 62, 91);
-            border-color: rgb(192, 62, 91);
-            width: 3cm;
-            height: 40px;
-            color: #fff;
-            letter-spacing: 1px;
-            cursor: pointer;
-        }
-
-
-    </style>
-
-</head>
-    <body>
-
-        <?php include('header.php'); ?> <!-- Adds Header -->
+    <?php include "header.php" ?> <!--Adds Header -->
 
         <div class="container">
     	    <main>
@@ -152,59 +50,71 @@
         
                     <!--Individual sections made for each book-->
                     <tr>
-                        <td><img src="https://media.discordapp.net/attachments/475843835990114315/1023311951201304616/unknown.png?width=701&height=701"
+                        <td><img src="book1.gif"
                                 alt="" width="150" height="170"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</td>
-                        <td>$$$</td>
+                        <td>PHP & MySQL in easy steps begins by explaining how to install a free web server, the PHP 
+                            interpreter, and MySQL database server, to create an environment in which you can produce 
+                            your very own data-driven server-side web pages. You will learn how to write PHP server-side
+                             scripts and how to make MySQL database queries. Examples illustrate how to store and 
+                             retrieve Session Data, how to provide a Message Board, and how to create an E-Commerce Shopping Cart.</td>
+                        <td>$14.99</td>
                     </tr>
                     <tr>
-                        <td><img src="https://media.discordapp.net/attachments/475843835990114315/1023311951201304616/unknown.png?width=701&height=701"
+                        <td><img src="book2.gif"
                                 alt="" width="150" height="170"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</td>
-                        <td>$$$</td>
+                        <td>Engineering software products provides essential guidance for writing assignments typical in 
+                            graduate programs in religion and has served as a standard textbook for seminary research courses.
+                             The fourth edition is updated to include information on Turabian 9th edition, SBL Handbook 2nd edition, 
+                             new resource lists, and additional help with online resources and formatting issues. Most importantly,
+                              this new edition is revised from the perspective of information abundance rather than information 
+                              scarcity. Today's research mindset has shifted from "find anything" and "be satisfied with anything"
+                               to "choose intentionally" reliable and credible sources.</td>
+                        <td>$74.99</td>
                     </tr>
                     <tr>
-                        <td><img src="https://media.discordapp.net/attachments/475843835990114315/1023311951201304616/unknown.png?width=701&height=701"
+                        <td><img src="book3.gif"
                                 alt="" width="150" height="170"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</td>
-                        <td>$$$</td>
+                        <td>Enivornmental Ethics, 7th Edition presents the main issues in environmental ethics using a diverse
+                             set of readings arranged in dialogue format. The seventh edition of this popular anthology features 
+                             selections from contemporary authors as well as readings from classic writers, all chosen for 
+                             their clarity and accessibility. By exploring both sides of every topic, this edition helps students
+                              quickly grasp each subject and move from theory to application. Making this textbook even more
+                               enjoyable to read include new sections on Environmental Justice, Climate Change, Food Ethics, 
+                               Nature and Naturalness, Sustainability, Population and Consumption, Future Generations, and Holism.</td>
+                        <td>$44.50</td>
                     </tr>
                     <tr>
-                        <td><img src="https://media.discordapp.net/attachments/475843835990114315/1023311951201304616/unknown.png?width=701&height=701"
+                        <td><img src="book4.gif"
                                 alt="" width="150" height="170"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</td>
-                        <td>$$$</td>
+                        <td>Campbell Biology delivers a trusted, accurate, current, and pedagogically innovative experience that 
+                            guides students to a true understanding of biology. The author team advances Neil Campbell's vision 
+                            of meeting and equipping students at their individual skill levels by developing tools, visuals, 
+                            resources, and activities that encourage participation and engage students in their learning. Known
+                            for strategically integrating text and artwork, this trusted course solution works hand in hand with
+                             Mastering Biology to reinforce key concepts, build scientific skills, and promote active learning. 
+                             The 12th Edition meets demonstrated student needs with new student-centered features, expanded 
+                             interactivity in the eText, downloadable Reading Guide worksheets that emphasize key concepts, 
+                             and a fully revised assessment program.</td>
+                        <td>$80.99</td>
                     </tr>
                     <tr>
-                        <td><img src="https://media.discordapp.net/attachments/475843835990114315/1023311951201304616/unknown.png?width=701&height=701"
+                        <td><img src="book5.gif"
                                 alt="" width="150" height="170"></td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</td>
-                        <td>$$$</td>
+                        <td>Newly updated, this full-color resource offers a systematic approach to performing a neuromusculoskeletal
+                             assessment with rationales for various aspects of the assessment. This comprehensive text covers every
+                              joint of the body, head and face, gait, posture, emergency care, the principles of assessment, and 
+                              preparticipation evaluation. The latest edition of this core text is the essential cornerstone in 
+                              the new four-volume musculoskeletal rehabilitation series.</td>
+                        <td>$42.40</td>
                     </tr>
                     
                 </table>
                 <br>
             </main>
-        </div>
+        </div>    
 
-    <?php
-    define('FILE_AUTHOR', ''); #Defines Page Author, If Any Exists
-    include('footer.php');  #Adds Footer
-    ?>
-
+<?php include "footer.php"; ?> <!-- Adds Footer -->
+        
+    </body>
+</head>
 </html>
