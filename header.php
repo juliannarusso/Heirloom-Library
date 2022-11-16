@@ -73,7 +73,7 @@
                             <li><a href="products.php" style = "color: rgb(198, 32, 38);">Products</a></li>
                             <li><a href="sellers.php" style = "color: rgb(198, 32, 38);">Sellers</a></li>
                             <li><a href="orders.php" style = "color: rgb(198, 32, 38);">Orders</a></li>
-                            <li><a href=""><u>Sign In</u></a></li>
+                            <li><a href="signin.php"><u>Sign In</u></a></li>
                             <li><a href=""><u>My Cart</u></a></li>
                         </ul>
                     </div>
