@@ -15,20 +15,7 @@
         </style>
     </head> 
     <body>
-        <div class="fixed-header">
-            <div class="container">
-                <header>
-                    <div class="menu">
-                        <b class="homebutton"><a href="index.php"><u style="color: rgb(198, 32, 38);">Home</u></a></b>
-                        <ul>
-                            <li><a href=""><u>Sign In</u></a></li>
-                            <li><a href=""><u>My Cart</u></a></li>
-                        </ul>
-                    </div>
-                </header>
-            </div>
-            <hr>
-        </div>
+        <?php include "header.php"; ?>
 
         <div class="container">
     	    <main>
@@ -43,7 +30,8 @@
                             Online Bookstore For College Textbooks
                         </th>
                     </tr>
-                </table>         
+                </table>
+            </div>
         <header>
             <h3 style = "text-align: center; color: rgb(198, 32, 198); font-size: 25px;"><u>ADMIN VIEW</u></h3>
 
@@ -51,6 +39,8 @@
 
             <div class = "selection">
             <?php
+                define ("FILE_AUTHOR", "M. Ong");
+                include "error_handler.php";
 
                 echo "<form action = '' method = 'POST'>";
 
@@ -158,6 +148,7 @@
                     }
                 }
             }
+            
             //Explain table function will apply the SQL EXPLAIN command to each output table in site_db. 
             //*For final DB preparation, clear site_db of all extraneous tables (anything besides t6) for testing purposes.
             function explain_table ($thistable, $dbc) { 
@@ -172,6 +163,7 @@
                     }
                 }
             }
+           
         ?>
 
 
@@ -181,6 +173,8 @@
 
 
         </div>
+            
+        <?php include "footer.php"; ?>
         </main>
     </body>
 </html>
