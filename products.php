@@ -3,7 +3,7 @@
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
-        <title> Admin View </title>
+        <title> Our Products </title>
         <link rel="stylesheet" href="styles.css">
     </head> 
     <body>
@@ -59,12 +59,15 @@
         echo "
             <table border=1>
             <tr>
-                <th>Field</th>
-                <th>Type</th>
-                <th>Nullable</th>
-                <th>Key</th>
-                <th>Default</th>
-                <th>Extras</th>
+                <th>ISBN</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Condition</th>
+                <th>Copyright</th>
+                <th>Inventory Date</th>
+                <th>Seller ID</th>
+                <th>Status</th>
             </tr>
         ";
     
@@ -74,6 +77,8 @@
             echo "<tr>" . "<td>" . $row[0] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[1] . "</td>";
             echo "<td>" . $row[2] . "</td>" . "<td>" . $row[3] . "</td>";
             echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[5] . "</td>";
+            echo "<td style = 'word-wrap: break-word;'>" . $row[6] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[7] . "</td>";
+            echo "<td>" . $row[8] . "</td>";
         }
     
         echo "</table>";
