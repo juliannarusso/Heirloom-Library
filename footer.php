@@ -63,7 +63,7 @@
     if (defined('FILE_AUTHOR') && FILE_AUTHOR != "") { //Checks if Webpage Author is Defined
         $fileAuthor = FILE_AUTHOR;
     } else { //If Webpage Author isn't Defined, set to Default: 'Everyone is Author'
-        $fileAuthor = "A. O'Leary 2022, M. Ong, A. Riotto, J. Russo";
+        $fileAuthor = "A. O'Leary, M. Ong, A. Riotto, J. Russo 2022";
     }
 ?>
 

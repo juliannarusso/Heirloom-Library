@@ -30,7 +30,6 @@
         <div class = "options">
 
 <?php
-define("FILE_AUTHOR", "A. Riotto");
 require "connect_db.php";
 $q = "SELECT * FROM t6_seller";
 $r = mysqli_query($dbc, $q);
@@ -69,8 +68,12 @@ if ($r) {
         </div>
         </header>
     </main>
+        <footer>
+            <?php
+            define("FILE_AUTHOR", "A. Riotto");
+            include "footer.php";
+            ?>
+        </footer>
     </body>
-    
-    <?php include "footer.php"; ?>
     
 </html>
