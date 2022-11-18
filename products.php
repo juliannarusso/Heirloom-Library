@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="en"> 
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title> Our Products </title>
         <link rel="stylesheet" href="styles.css">
-    </head> 
+    </head>
     <body>
-        <div class="fixed-header">
-            <div class="container">
-                <header>
-                    <div class="menu">
-                        <b class="homebutton"><a href="index.php"><u style="color: rgb(198, 32, 38);">Home</u></a></b>
-                        <ul>
-                            <li><a href="products.php">Products</a></li>
-                            <li><a href="sellers.php">Sellers</a></li>
-                            <li><a href="orders.php">Orders</a></li>
-                            <li><a href=""><u>Sign In</u></a></li>
-                            <li><a href=""><u>My Cart</u></a></li>
-                        </ul>
-                    </div>
-                </header>
-            </div>
-            <hr>
-        </div>
+        <?php include "header.php"; ?>
     </body>
     <div class="container">
     	    <main>
@@ -38,9 +22,9 @@
                             Online Bookstore For College Textbooks
                         </th>
                     </tr>
-                </table>  
-                <h3 style="color: rgb(198, 32, 38)"><center> Our Products: </center></h3>    
-            </main> 
+                </table>
+                <h3 style="color: rgb(198, 32, 38)"><center> Our Products: </center></h3>
+            </main>
     </div>
 </html>
 <?php
@@ -88,15 +72,7 @@
 
 ?>
 
-<div class="fixed-footer">
-    <hr>
-    <div class="footer">
-        <small class="info"><a href=""><u style="color: rgb(172, 62, 91);">HeirloomLibSupport@gmail.com</u></a></small>
-        <ul>
-            <li><a href="creatingfaqs.html"><small><u>FAQ</u></small></a></li>
-            <li><a href="disclaimer.html"><small><u>Disclaimer</u></small></a></li>
-            <li><a href=""><small><u>Translate</u></small></a></li>
-            <li><a href=""><small>(C) A. O'Leary 2022 </small></a></li>
-        </ul>
-    </div>        
-</div>
+<?php
+    define("FILE_AUTHOR", "A. O'Leary");
+    include "footer.php";
+?>
