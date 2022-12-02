@@ -80,7 +80,7 @@
                     </tr>";
                     echo "</table>";
                     
-                    REQUIRE "../connect_db.php"; #Connect to our database.
+                    require "../connect_db.php"; #Connect to our database.
 
                     $q = "SHOW TABLES";
                     $r = mysqli_query($dbc, $q);
@@ -102,12 +102,15 @@
                             echo explain_table($row[0], $dbc); 
                         }
                     }
+                    echo "</table>";
+                    echo "<p>";
                     echo "</div>";
                 }
 
+
                 //If the user wants to see if the database connection is live.
                 else if ($_POST['view'] == "connection") {
-                    REQUIRE "../connect_db.php";
+                    require "../connect_db.php";
                     $q = "SHOW TABLES";
                     $r = mysqli_query($dbc, $q);
                     if ($r) {
@@ -117,7 +120,7 @@
 
                 //If the user wants to see all the users in the database.
                 else if ($_POST['view'] == "users") {
-                    REQUIRE "../connect_db.php";
+                    require "../connect_db.php";
                     $q = "SELECT * FROM t6_user";
                     $r = mysqli_query($dbc, $q);
                     if ($r) {
@@ -145,6 +148,7 @@
                         }
 
                         echo "</table>";
+                        echo "<p>";
                     }
                 }
             }
@@ -163,7 +167,7 @@
                     }
                 }
             }
-           
+        
         ?>
 
 
@@ -173,7 +177,7 @@
 
 
         </div>
-	  <br><br><br>
+            
         <?php include "footer.php"; ?>
         </main>
     </body>

@@ -27,13 +27,58 @@
             </main>
     </div>
 </html>
-<?php
+<?php   
 
-    echo "<div class = 'options'> <table>";
-    // connecting to mysql database
-    REQUIRE "../connect_db.php";
+    require "../connect_db.php";
+    if (ISSET($_GET['searchcontent'])) {$searchdata = $_GET['searchcontent'];}
+    //!Use this to select from the book listing.
+    //echo $searchdata;
+    
+    if (ISSET($searchdata)) {
 
-    // Printing each row in the sql table courses
+        echo "<div class = 'options'> <table>";
+
+        echo "</div>";
+
+        $q = "SELECT * FROM t6_product WHERE title LIKE \"%" . $searchdata . "%\"";
+        $r = mysqli_query($dbc, $q);
+        //echo $q;
+
+        if ($r) {
+    
+            echo "
+                <table border=1>
+                <tr>
+                    <th>ISBN</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Condition</th>
+                    <th>Copyright</th>
+                    <th>Inventory Date</th>
+                    <th>Seller ID</th>
+                    <th>Status</th>
+                    <th>Purchase</th>
+                </tr>
+            ";
+        
+        
+        
+            while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+                echo "<tr>" . "<td>" . $row[0] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[1] . "</td>";
+                echo "<td>" . $row[2] . "</td>" . "<td>" . $row[3] . "</td>";
+                echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[5] . "</td>";
+                echo "<td style = 'word-wrap: break-word;'>" . $row[6] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[7] . "</td>";
+                echo "<td>" . $row[8] . "</td>";
+            }
+        
+            echo "</table>";
+            echo "<br>";
+            echo "<br>";
+        }
+    } else {
+        echo "<div class = 'options'> <table>";
+    
     echo "</div>";
 
     $q = "SELECT * FROM t6_product";
@@ -52,6 +97,7 @@
                 <th>Inventory Date</th>
                 <th>Seller ID</th>
                 <th>Status</th>
+                <th>Purchase</th>
             </tr>
         ";
     
@@ -63,12 +109,17 @@
             echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[5] . "</td>";
             echo "<td style = 'word-wrap: break-word;'>" . $row[6] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[7] . "</td>";
             echo "<td>" . $row[8] . "</td>";
+
+            //!Add to cart button. Add to both table displays. 
         }
     
         echo "</table>";
         echo "<br>";
         echo "<br>";
+        }
     }
+
+    
 
 ?>
 

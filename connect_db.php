@@ -18,7 +18,7 @@
 
 <?php
   
-  $display_messages = TRUE;              
+  $display_messages = FALSE;              
  
   if ($display_messages) {
       Echo "<br> Attemping to connect to our Mysql database...  ";

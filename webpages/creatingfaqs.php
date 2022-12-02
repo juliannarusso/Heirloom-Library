@@ -195,6 +195,9 @@
                 <li> <a href="productfaqs.php"><u style="color: rgb(172,62,91);">Product FAQs</u></a></li>
             </ul> 
         </header>
+        
+            </main>
+        </div>
         <?php include "footer.php"; ?>
     </body>
 </html>
