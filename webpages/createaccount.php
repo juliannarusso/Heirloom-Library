@@ -19,7 +19,7 @@
                 background: white;
                 width: 410px;
                 padding: 30px;
-                box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 8px rgba(75, 0, 0, 0.2);
             }
             .container .text {
                 font-size: 35px;
