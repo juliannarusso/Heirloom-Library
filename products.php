@@ -31,7 +31,7 @@
 
     echo "<div class = 'options'> <table>";
     // connecting to mysql database
-    REQUIRE "connect_db.php";
+    REQUIRE "../connect_db.php";
 
     // Printing each row in the sql table courses
     echo "</div>";

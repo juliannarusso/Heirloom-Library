@@ -32,7 +32,7 @@
 
 <?php
 
-require "connect_db.php";
+require "../connect_db.php";
 $q = "SELECT * FROM t6_order";
 $r = mysqli_query($dbc, $q);
 if ($r) {

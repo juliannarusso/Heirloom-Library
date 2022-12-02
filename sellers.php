@@ -30,7 +30,7 @@
         <div class = "options">
 
 <?php
-require "connect_db.php";
+require "../connect_db.php";
 $q = "SELECT * FROM t6_seller";
 $r = mysqli_query($dbc, $q);
 if ($r) {
