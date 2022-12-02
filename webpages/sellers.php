@@ -60,6 +60,10 @@ if ($r) {
     }
 
     echo "</table>";
+
+    if($_SESSION["login_status"] == "LOGGED IN") {
+        echo "<p> Hello!TestHere <p>";
+    }
 }
 
 
