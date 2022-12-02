@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="styles.css">
     </head> 
     <body>
-        <?php include "header.php";
+        <?php 
+        session_start();
+        include "header.php";
         define ("FILE_AUTHOR", "M. Ong");
          ?>
 
@@ -32,39 +34,63 @@
 
 <?php
 
-require "../connect_db.php";
-$q = "SELECT * FROM t6_order";
-$r = mysqli_query($dbc, $q);
-if ($r) {
+    require "../connect_db.php";
+    $q = "SELECT * FROM t6_order";
+    $r = mysqli_query($dbc, $q);
+    if ($r) {
 
-    echo "
-                        <table border=1>
-                            <tr>
-                                <th>Book ID</th>
-                                <th>Customer ID</th>
-                                <th>Order Date</th>
-                                <th>Total Price</th>
-                                <th>Quantity</th>
-                                <th>Status</th>
-                            </tr>
-        ";
+        echo "
+                            <table border=1>
+                                <tr>
+                                    <th>Book ID</th>
+                                    <th>Customer ID</th>
+                                    <th>Order Date</th>
+                                    <th>Total Price</th>
+                                    <th>Quantity</th>
+                                    <th>Status</th>
+                                </tr>
+            ";
 
 
 
-    while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
-        echo "<tr>" . "<td>" . $row[0] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[1] . "</td>";
-        echo "<td>" . $row[2] . "</td>" . "<td>" . $row[3] . "</td>";
-        echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[5] . "</td>";
-    }
+        while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+            echo "<tr>" . "<td>" . $row[0] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[1] . "</td>";
+            echo "<td>" . $row[2] . "</td>" . "<td>" . $row[3] . "</td>";
+            echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[5] . "</td>";
+        }
 
-    echo "</table>";
+        echo "</table>";
+
+        // if (ISSET($_SESSION['login_status'])) {
+        //     $login_status = "LOGGED IN";
+        //     echo "<br><h4 style = 'text-align: center; text-decoration: none;'><a href='addorder.php'><u style = 'color: rgb(198, 32, 38); font-size: 17px;'>Manually Add an Order</u></a></h4>";
+        // }
+
+        if (ISSET($_SESSION['active_user'])) {
+            $active_user = $_SESSION['active_user'];
+        }
+        if (ISSET($_SESSION['login_status'])) {
+            $login_status = "LOGGED IN";
+
+            $q = "SELECT user_rank FROM t6_user WHERE username = \"" . $active_user . "\"";
+            // echo $q;
+            $r = mysqli_query($dbc, $q);
+
+            if ($r) {
+                while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+                    if ($row[0] == "Admin" || $row[0] == "Employee") {
+                        echo "<br><h4 style = 'text-align: center; text-decoration: none;'><a href='addorder.php'><u style = 'color: rgb(198, 32, 38); font-size: 17px;'>Manually Add an Order</u></a></h4>";
+                    }
+                }
+            }
+        }
 }
 
 
 ?>
             </div>
         </div>
-            <?php include "footer.php"; ?>
+            <?php echo "<br><br>"; include "footer.php"; ?>
         </header>
     </main>
     </body>

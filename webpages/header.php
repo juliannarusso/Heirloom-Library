@@ -9,7 +9,7 @@
     <style>
     /* Add some padding on document's body to prevent the content
     to go underneath the header and footer */
-        .container{
+        .container1{
             width: 80%;
             margin: 0 auto; /* Center the DIV horizontally */
         }
@@ -17,7 +17,7 @@
             width: 100%;
             position: fixed;
             background:  #fff;
-            padding: 10px 0;
+            padding: 10px 1;
             color: #fff;
             top: 0;
         }
@@ -65,7 +65,7 @@
 
 <body>
 <div class="fixed-header">
-            <div class="container">
+            <div class="container1">
                 <header>
                     <div class="menu">
                         <b class="homebutton"><a href="index.php"><u style="color: rgb(198, 32, 38);">Home</u></a></b>

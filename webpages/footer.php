@@ -73,11 +73,9 @@
         <div class="footer">
             <small class="info"><a href=""><u class="email">HeirloomLibSupport@gmail.com</u></a></small>
                 <ul>
-                <li><a href="admin.php"><small><u>Administrator</u></small></a></li>
                 <li><a href="customers.php"><small><u>Customers</u></small></a></li>
-                <li><a href="creatingfaqs.php"><small><u>FAQ</u></small></a></li>
+                <li><a href="creatingfaqs.html"><small><u>FAQ</u></small></a></li>
                 <li><a href="disclaimer.php"><small><u>Disclaimer</u></small></a></li>
-                <li><a href=""><small><u>Translate</u></small></a></li>
                 <?php echo "<li><a href=''><small>(C) " . $fileAuthor . " </small></a></li>"; ?> <!-- Places Webpage Author-->
             </ul>
        </div>

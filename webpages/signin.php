@@ -11,6 +11,7 @@
             width: 80%;
             margin: 0 auto;
         }
+        
 
         .fixed-header,
         .fixed-footer {
@@ -187,16 +188,18 @@
 
     include "header.php";
 
-    echo "<h3 style = 'text-align: center; color: rgb(198, 32, 38); font-size: 25px;'><u>Sign-In</u></h3>";
+    if (isset($_SESSION['login_status'])) {
+        $login_status = $_SESSION['login_status'];
+        echo "<h3 style = 'text-align: center; color: rgb(198, 32, 38); font-size: 25px;'><u>Your Account</u></h3>";
+    } else {
+        $login_status = "NOT LOGGED IN";
+        echo "<h3 style = 'text-align: center; color: rgb(198, 32, 38); font-size: 25px;'><u>Sign-In</u></h3>";
+    }
 
+    
     echo "<div class = 'signin'>";
 
     //If login_status is not set, it is the first load - there is no user logged in.
-    if (isset($_SESSION['login_status'])) {
-        $login_status = $_SESSION['login_status'];
-    } else {
-        $login_status = "NOT LOGGED IN";
-    }
 
     include "error_handler.php";
     define("FILE_AUTHOR", "M. Ong");
@@ -286,7 +289,7 @@
 
         echo "<br><input type = 'password' placeholder = 'Password' name = 'password'>";
 
-        echo "<br><p><a href=''><b><u>Create an Account</u></b></a>";
+        echo "<br><p><a href='createaccount.php'><b><u>Create an Account</u></b></a>";
 
         echo "<p><button style = 'background-color: rgb(255, 93, 101); color: white; border-color: white;
         margin-right: auto; margin-left: auto;' type = 'submit'>Sign In</button>";
@@ -311,8 +314,29 @@
         $_SESSION['login_status'] = "LOGGED IN";
     }
 
+    if (ISSET($_SESSION['active_user'])) {
+        $active_user = $_SESSION['active_user'];
+    }
+    if (ISSET($_SESSION['login_status'])) {
+        $login_status = "LOGGED IN";
+
+        //!Design this new YOUR ACCOUNT page to include links to update the user's account to a customer or seller.
+        require "../connect_db.php";
+        $q = "SELECT user_rank FROM t6_user WHERE username = \"" . $active_user . "\"";
+        // echo $q;
+        $r = mysqli_query($dbc, $q);
+
+        if ($r) {
+            while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+                if ($row[0] == "Admin") {
+                    echo "<li><b><a href='admin.php'><small><u>Administrator</u></small></a></b></li>";
+                }
+            }
+        }
+    }
+
     echo "</div>";
 
-    include "footer.php";
+    include "adminfooter.php";
 
     ?>
