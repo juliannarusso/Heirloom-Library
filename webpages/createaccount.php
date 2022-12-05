@@ -36,6 +36,7 @@
             }
             form .data label {
                 font-size: 14px;
+                color: rgb(222, 62, 91);
             }
             form .data input {
                 height: 175%;
@@ -43,6 +44,7 @@
                 padding-left: 10px;
                 font-size: 12px;
                 border: 1px solid lightgray;
+                border-color: rgb(222, 62, 91);
             }
             form .button {
                 margin: 55px 1;
@@ -144,6 +146,7 @@
                             }
                         }
 
+                        //Check if the username is already taken.
                         if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             $q = "SELECT * FROM t6_user";
                             $r = mysqli_query($dbc, $q);

@@ -321,18 +321,18 @@
         $login_status = "LOGGED IN";
 
         //!Design this new YOUR ACCOUNT page to include links to update the user's account to a customer or seller.
-        require "../connect_db.php";
-        $q = "SELECT user_rank FROM t6_user WHERE username = \"" . $active_user . "\"";
-        // echo $q;
-        $r = mysqli_query($dbc, $q);
+        // require "../connect_db.php";
+        // $q = "SELECT user_rank FROM t6_user WHERE username = \"" . $active_user . "\"";
+        // // echo $q;
+        // $r = mysqli_query($dbc, $q);
 
-        if ($r) {
-            while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
-                if ($row[0] == "Admin") {
-                    echo "<li><b><a href='admin.php'><small><u>Administrator</u></small></a></b></li>";
-                }
-            }
-        }
+        // if ($r) {
+        //     while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+        //         if ($row[0] == "Admin") {
+        //             echo "<br><br><b><a href='addcustomer.php'><u style = 'font-size: 18px;'>Set up Customer Profile</u></a></b>";
+        //         }
+        //     }
+        // }
     }
 
     echo "</div>";

@@ -26,12 +26,26 @@
         
                 <!--Search bar-->
                 <div class="search">
-                    <form>
-                        <input type="text" placeholder="Search for Title, Author, Keyword, ISBN...">
-                        <button type="submit">Search</button>
+                    <?php 
+
+                    echo "
+                    <form style = 'width: 20cm;'action = 'products.php' method = 'GET'>
+                        <input type='text' placeholder='Search for Title, Author, Keyword, ISBN...' name = 'searchcontent' value =''>
+                        <input style = 'background: rgb(192, 62, 91);
+                        border-color: rgb(192, 62, 91);
+                        width: 3cm;
+                        height: 40px;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        text-align: center;
+                        padding-right: 16px;
+                        cursor: pointer;' type='submit' value = 'Search'>
                     </form>
+                    ";
+                    ?>
+                    
                 </div>
-                <small style="margin-left: 20cm; color:rgb(182, 93, 116)"><u>Search Options</u></small>
+                <!-- <small style="margin-left: 20cm; color:rgb(182, 93, 116)"><u>Search Options</u></small> -->
         
                 <!--Table section for books-->
                 <br>
@@ -50,7 +64,7 @@
         
                     <!--Individual sections made for each book-->
                     <tr>
-                        <td><img src="../homepage/book1.gif"
+                        <td><img src="book1.gif"
                                 alt="" width="150" height="170"></td>
                         <td>PHP & MySQL in easy steps begins by explaining how to install a free web server, the PHP 
                             interpreter, and MySQL database server, to create an environment in which you can produce 
@@ -60,7 +74,7 @@
                         <td>$14.99</td>
                     </tr>
                     <tr>
-                        <td><img src="../homepage/book2.gif"
+                        <td><img src="book2.gif"
                                 alt="" width="150" height="170"></td>
                         <td>Engineering software products provides essential guidance for writing assignments typical in 
                             graduate programs in religion and has served as a standard textbook for seminary research courses.
@@ -72,7 +86,7 @@
                         <td>$74.99</td>
                     </tr>
                     <tr>
-                        <td><img src="../homepage/book3.gif"
+                        <td><img src="book3.gif"
                                 alt="" width="150" height="170"></td>
                         <td>Enivornmental Ethics, 7th Edition presents the main issues in environmental ethics using a diverse
                              set of readings arranged in dialogue format. The seventh edition of this popular anthology features 
@@ -84,7 +98,7 @@
                         <td>$44.50</td>
                     </tr>
                     <tr>
-                        <td><img src="../homepage/book4.gif"
+                        <td><img src="book4.gif"
                                 alt="" width="150" height="170"></td>
                         <td>Campbell Biology delivers a trusted, accurate, current, and pedagogically innovative experience that 
                             guides students to a true understanding of biology. The author team advances Neil Campbell's vision 
@@ -98,7 +112,7 @@
                         <td>$80.99</td>
                     </tr>
                     <tr>
-                        <td><img src="../homepage/book5.gif"
+                        <td><img src="book5.gif"
                                 alt="" width="150" height="170"></td>
                         <td>Newly updated, this full-color resource offers a systematic approach to performing a neuromusculoskeletal
                              assessment with rationales for various aspects of the assessment. This comprehensive text covers every
