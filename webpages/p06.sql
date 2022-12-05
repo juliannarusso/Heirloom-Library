@@ -167,15 +167,5 @@ INSERT INTO t6_order (book_id, cus_id, order_date, total_price, qty, status) VAL
     (14, 12, "2022-09-29", 24.99, 1, "Active"),
     (11, 11, CURDATE(), 43.84, 1, "Active");
 
-    -- cart table. Every cart has its own Id and foreign key for Customer ID. Show book id foreign key, title, price. 
-    CREATE TABLE IF NOT EXISTS t6_cart (
-      cart_id INT PRIMARY KEY AUTO_INCREMENT,
-      cus_id INT NOT NULL, 
-      book_id INT NOT NULL,
-      book_title VARCHAR(75) NOT NULL,
-      book_price DECIMAL,
-      FOREIGN KEY (cus_id) REFERENCES t6_customer(cus_id),
-      FOREIGN KEY (book_id) REFERENCES t6_product(book_id)
-    );
 
     
