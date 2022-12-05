@@ -9,6 +9,64 @@
             .wrapText td {
                 word-wrap: break-word;
             }
+
+            form, input[type=radio] {
+                border-radius: 1cm;
+                color:whitesmoke;
+                background-color: indianred;
+                justify-content: center;
+                margin: 0 auto;
+                font-weight: bold;
+                padding:6px;
+                align-items: center;
+            }
+
+            input[type='submit'] {
+                border-radius: 1cm;
+                border-color: crimson;
+                background-color: crimson;
+                font-weight: bolder;
+                color:whitesmoke;
+                margin-left: 10px;
+                padding-right: 15px;
+            }
+
+            /* .sortBox-Red form, input[type=radio] {
+                background-color: indianred;
+
+            }
+
+            .sortBox-Blue form, input[type=radio] {
+                background-color: lightblue;
+            } */
+
+            /* .sortBox {
+
+                align-items: center;
+                text-align: center;
+                border-color: brown;
+                border-radius: 1cm;
+                border-style: initial;
+                color:white;
+                justify-content: center;
+                padding: 6px;
+            }
+            .sortBox-Red {
+                background-color: indianred;
+                
+            }
+            .sortBox-Blue {
+
+                background-color: lightblue;
+
+            }
+            input {
+                /* border-width: 1cm;
+                tab-size: 10cm;
+                background-color: brown;
+                border-radius: 0cm; */
+            /* } */
+
         </style>
     </head>
     <body>
@@ -35,7 +93,15 @@
         <div class = "options">
 
 <?php
-    $q = "SELECT * FROM t6_seller";
+
+    #Form Data Checking
+
+    if (isset($_POST['sort'])) { $sortInput = " ORDER BY " . $_POST['sort']; } else { $sortInput = " ORDER BY sell_id"; }
+    if (isset($_POST['direction'])) { $directionInput = " " . $_POST['direction']; } else { $directionInput = " ASC";}
+
+    #Table Query
+    $q = "SELECT * FROM t6_seller" . $sortInput . $directionInput;
+    echo $q;
     $r = mysqli_query($dbc, $q);
     if ($r) {
 
@@ -61,36 +127,41 @@
         }
         echo "</table>";
         echo "</div>";
-
-        if ($isEmployeeAdmin) {
-            echo "hello";
-        }
-
-
         
     }
 
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
 
-    // if (ISSET($_SESSION['login_status'])) {
-    //     $login_status = "LOGGED IN";
 
-    //     $q = "SELECT user_rank FROM t6_user WHERE username = \"" . $active_user . "\"";
-    //     echo $q;
-    //     $r = mysqli_query($dbc, $q);
+    if ($isEmployeeAdmin) {
+        #HTML FORMS
+        echo "<br><br><br>";
+        echo "<form action='' method='POST'>";
+        echo "<input type = 'radio' name = 'sort' value = 'sell_id' checked> Id";
+        if ($sortInput == " ORDER BY num_books_sold") { echo "<input type = 'radio' name = 'sort' value = 'num_books_sold' checked> Books Sold"; } else { echo "<input type = 'radio' name = 'sort' value = 'num_books_sold'> Books Sold";}
+        if ($sortInput == " ORDER BY avg_rating") { echo "<input type = 'radio' name = 'sort' value = 'avg_rating' checked> Average Rating"; } else { echo "<input type = 'radio' name = 'sort' value = 'avg_rating'> Average Rating";}
+        if ($sortInput == " ORDER BY phone") { echo "<input type = 'radio' name = 'sort' value = 'phone' checked> Phone Number"; } else { echo "<input type = 'radio' name = 'sort' value = 'phone'> Phone Number";}
+        if ($sortInput == " ORDER BY address") { echo "<input type = 'radio' name = 'sort' value = 'address' checked> Address"; } else { echo "<input type = 'radio' name = 'sort' value = 'address'> Address";}
+        if ($sortInput == " ORDER BY rating") { echo "<input type = 'radio' name = 'sort' value = 'rating' checked> Current Rating"; } else { echo "<input type = 'radio' name = 'sort' value = 'rating'> Current Rating";}
+        if ($sortInput == " ORDER BY comments") { echo "<input type = 'radio' name = 'sort' value = 'comments' checked> Comment"; } else { echo "<input type = 'radio' name = 'sort' value = 'comments'> Comment";}
+        if ($sortInput == " ORDER BY status") { echo "<input type = 'radio' name = 'sort' value = 'status' checked> Status"; } else { echo "<input type = 'radio' name = 'sort' value = 'status'> Status";}
+        echo "<br><input type='radio' name='direction' value='ASC' checked>	Ascending";
+        if ($directionInput == " DESC") { echo "<input type = 'radio' name = 'direction' value = 'DESC' checked> Descending"; } else { echo "<input type = 'radio' name = 'direction' value = 'DESC'> Descending";}
+        echo "<br><input type='submit' value='Sort It!' >";
+        echo "</form>";
 
-    //     if ($r) {
-    //         while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
-    //             if ($row[0] == "Admin" || $row[0] == "Employee") {
-    //                 echo "<br><h4 style = 'text-align: center; text-decoration: none;'><a href='addorder.php'><u style = 'color: rgb(198, 32, 38); font-size: 17px;'>Manually Add an Order</u></a></h4>";
-    //             }
-    //         }
-    //     }
-    // }
 
+        echo "hi";
+
+
+
+    }
 
 ?>
-            </div>
-        </div>
         </header>
     </main>
         <footer>
