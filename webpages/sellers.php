@@ -31,42 +31,6 @@
                 padding-right: 15px;
             }
 
-            /* .sortBox-Red form, input[type=radio] {
-                background-color: indianred;
-
-            }
-
-            .sortBox-Blue form, input[type=radio] {
-                background-color: lightblue;
-            } */
-
-            /* .sortBox {
-
-                align-items: center;
-                text-align: center;
-                border-color: brown;
-                border-radius: 1cm;
-                border-style: initial;
-                color:white;
-                justify-content: center;
-                padding: 6px;
-            }
-            .sortBox-Red {
-                background-color: indianred;
-                
-            }
-            .sortBox-Blue {
-
-                background-color: lightblue;
-
-            }
-            input {
-                /* border-width: 1cm;
-                tab-size: 10cm;
-                background-color: brown;
-                border-radius: 0cm; */
-            /* } */
-
         </style>
     </head>
     <body>
@@ -101,7 +65,6 @@
 
     #Table Query
     $q = "SELECT * FROM t6_seller" . $sortInput . $directionInput;
-    echo $q;
     $r = mysqli_query($dbc, $q);
     if ($r) {
 
@@ -155,7 +118,6 @@
         echo "</form>";
 
 
-        echo "hi";
 
 
 
