@@ -1,0 +1,210 @@
+.container{
+    width: 80%; 
+    margin: 0 auto; 
+}
+.fixed-header, .fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background:  #fff;
+    padding: 10px 0;
+    color: #fff;
+}
+.fixed-header{
+    top: 0;
+}
+.fixed-footer{
+    bottom: 0;
+}    
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+.container p{
+    line-height: 200px; 
+}
+
+.menu {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homebutton {
+    width: 120px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(172, 62, 91);
+}
+
+.footer {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    width: 120px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: rgba(172, 62, 91, 0.8);
+}
+
+.search {
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listings {
+    width: 1100px;
+    color: black;
+    background-color: rgba(192, 62, 100, 0.1);
+    border-collapse: collapse;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listings th {
+    font-size: 15px;
+    font-weight: bold;
+    border: 6px solid white;
+    height: 1cm;
+}
+
+.listings td {
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 6px solid white;
+}
+
+.listings tr:nth-child(even) {
+    background-color: rgba(192, 62, 100, 0.1);
+}
+
+body{        
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+h1 {
+    color: rgb(182, 93, 116);
+}
+
+hr {
+    height: 2px;
+    background-color: rgb(182, 93, 116);
+    border: none;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    background: white;
+    width: 500px;
+    height: 40px;
+    display: flex;
+}
+
+form input {
+    width: 800px;
+    border-color: rgb(222, 62, 91);
+    padding-left: 15px;
+}
+
+form button {
+    background: rgb(192, 62, 91);
+    border-color: rgb(192, 62, 91);
+    width: 3cm;
+    height: 40px;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.sortoptions input {
+    background: rgb(192, 62, 91);
+    border-color: rgb(192, 62, 91);
+    height: 100%;
+    color: white;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.sortoptions .sortradiobuttons {
+    height: 50%;
+    color: rgb(198, 32, 38);
+}
+
+.sortoptions label  {
+    height: 25%;
+    color: rgb(198, 32, 38);
+    padding: 0px 1em 0px 8px;
+}
+
+.options table {
+    border: 1px solid rgb(198, 32, 38);
+    border-collapse: collapse;
+    color: rgb(198, 32, 38);
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 1cm;
+    table-layout: fixed;
+}
+
+.options th {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 0.5cm;
+    width: 3cm;
+}
+
+.options td {
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+}
+
+.options tr {
+    border: 1px solid rgb(198, 32, 38);
+    color: rgb(198, 32, 38);
+    text-align: center;
+}
