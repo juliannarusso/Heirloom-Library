@@ -173,13 +173,15 @@
                             echo "<td>" . $row[2] . "</td>" . "<td>" . $row[3] . "</td>";
                             echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>";
                         }
-
+                        
                         echo "</table>";
+                        echo "<br><h4 style = 'text-align: center; text-decoration: none;'><a href='addemployee.php'><u style = 'color: rgb(198, 32, 38); font-size: 17px;'>Manually Add Employee</u></a></h4>";
                         echo "<p>";
                     }
                 }
             }
-            
+
+
             //Explain table function will apply the SQL EXPLAIN command to each output table in site_db. 
             //*For final DB preparation, clear site_db of all extraneous tables (anything besides t6) for testing purposes.
             function explain_table ($thistable, $dbc) { 
@@ -196,12 +198,6 @@
             }
         
         ?>
-
-
-
-
-
-
 
         </div>
             
