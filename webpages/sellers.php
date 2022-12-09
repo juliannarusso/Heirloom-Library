@@ -118,9 +118,8 @@
         echo "</form>";
 
         echo "<p><p>";
-
-
-
+    } else {
+        echo "<p>";
     }
 
 ?>

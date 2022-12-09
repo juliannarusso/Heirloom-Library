@@ -79,7 +79,7 @@
         //?echo "<br><br>VALUES (" . $bookid . ", " . $cusid . ", " . $price . ", " . $orddate . ", " . $qty . ", " . $status . ")";
         echo "<tr><td style = 'padding-top: 15px;'></td></tr>";
         $q = "INSERT INTO t6_employee VALUES (" . $emp_id . ", " . $salary . ", " . "\"" . $hire_date . "\"". ", \"" . $position . "\", \"" . $status . "\"" . ");";
-        echo $q;
+        //echo $q;
 
         $r = mysqli_query($dbc, $q);
         if ($r) {
