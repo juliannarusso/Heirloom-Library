@@ -49,6 +49,7 @@
                 echo "<option value = 'explain'> View Table Definitions </option>";
                 echo "<option value = 'users'> Show All Users</option>";
                 echo "<option value = 'connection'> Check Database Connection</option>";
+                echo "<option value = 'employees'> View all Employees</option>";
                 echo "</select>";
             
                 echo "<button style = 'background-color: rgb(240, 193, 208); color: rgb(198, 32, 38); border-color: white;' type='submit'>Submit</button>";
@@ -145,6 +146,32 @@
                             echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[5] . "</td>";
                             echo "<td style = 'word-wrap: break-word;'>" . $row[6] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[7] . "</td>";
                             echo "<td>" . $row[8] . "</td>";
+                        }
+
+                        echo "</table>";
+                        echo "<p>";
+                    }
+                }
+                else if ($_POST['view'] == "employees") {
+                    require "../connect_db.php";
+                    $q = "SELECT * FROM t6_employee";
+                    $r = mysqli_query($dbc, $q);
+                    if ($r) {
+
+                        echo "
+                        <table border=1>
+                            <tr>
+                                <th>ID</th>
+                                <th>Salary</th>
+                                <th>Hire Date</th>
+                                <th>Position</th>
+                                <th>Status</th>
+                            </tr>
+                        ";
+                        while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+                            echo "<tr>" . "<td>" . $row[0] . "</td>" . "<td style = 'word-wrap: break-word;'>" . $row[1] . "</td>";
+                            echo "<td>" . $row[2] . "</td>" . "<td>" . $row[3] . "</td>";
+                            echo "<td style = 'word-wrap: break-word;'>" . $row[4] . "</td>";
                         }
 
                         echo "</table>";
