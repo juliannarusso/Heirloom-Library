@@ -149,6 +149,8 @@
                         }
 
                         echo "</table>";
+                        echo "<br><h4 style = 'text-align: center; text-decoration: none;'><a href='promoteuser.php'><u style = 'color: rgb(198, 32, 38); font-size: 17px;'>Change User Rank</u></a></h4>";
+                        echo "<p>";
                         echo "<p>";
                     }
                 }
