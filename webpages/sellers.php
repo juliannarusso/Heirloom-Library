@@ -117,10 +117,9 @@
         echo "<br><input type='submit' value='Sort It!' >";
         echo "</form>";
 
-
-
-
-
+        echo "<p><p>";
+    } else {
+        echo "<p>";
     }
 
 ?>

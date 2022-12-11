@@ -1,4 +1,4 @@
--- Active: 1666582800406@@127.0.0.1@3306@site_db
+-- Active: 1666582800406@@127.0.0.1@3306
 USE site_db;
 
 -- Drop all required tables if they exist before creating.
@@ -114,23 +114,79 @@ INSERT INTO t6_user (user_rank, firstname, lastname, email, username, password, 
     ("Seller", "Mary", "Kate", "mkf23@gmail.com", "MKate", 'MKpass15$', 'HASH', 'Active'),
     ("Seller", "Cole", "Cassidy", "cass100@gmail.com", "CCree", 'CCpass16$', 'HASH', 'Active');
 
+INSERT INTO t6_user VALUES(25, "Employee", "Kayla", "Vitro", "kvitro44@gmail.com", "KVitro", "KVpass2", "HASH", "Active");
+INSERT INTO t6_user VALUES(26, "Employee", "Mark", "Twain", "MKTKHLL1@gmail.com", "MTwain", "twain111", "HASH", "Active");
+INSERT INTO t6_user VALUES(27, "Employee", "Felix", "Lengyel", "xqc333@gmail.com", "FLengyel", "failsafe44", "HASH", "Active");
+INSERT INTO t6_user VALUES(28, "Employee", "Tyler", "Blevins", "ninjaHLL@gmail.com", "TBlevins", "ninjafn", "HASH", "Active");
+INSERT INTO t6_user VALUES(29, "Employee", "Luke", "Walker", "LukeHLL@gmail.com", "LukeWalker", "ilikestarwars123", "HASH", "Active");
+INSERT INTO t6_user VALUES(30, "Employee", "James", "Sorelli", "SorelliHLL@gmail.com", "JSorelli", "sorelliBROTHER", "HASH", "Active");
+INSERT INTO t6_user VALUES(31, "Employee", "Kaleb", "Leonards", "KalebLeonards@gmail.com", "KLeonards", "KLBKL747$", "HASH", "Active");
+INSERT INTO t6_user VALUES(32, "Employee", "Jerry", "Chang", "JerryChang112@gmail.com", "JRusso", "chang86", "HASH", "Active");
+INSERT INTO t6_user VALUES(40, "Seller", "Katelyn", "Cromwell", "kcromwell40@gmail.com", "KCromwell", "kcroms", "HASH", "Active");
+INSERT INTO t6_user VALUES(41, "Seller", "Marcus", "Vescio", "MarkusV@gmail.com", "MVes", "top500", "HASH", "Active");
+INSERT INTO t6_user VALUES(42, "Seller", "Arjun", "Suresh", "ajoverwatch@gmail.com", "GenjiMain", "dragonblade", "HASH", "Active");
+INSERT INTO t6_user VALUES(43, "Seller", "Jack", "Martin", "martinj001@gmail.com", "Zen001", "tranquility", "HASH", "Active");
+INSERT INTO t6_user VALUES(44, "Seller", "Andrew", "Vallone", "andyv@yahoo.com", "AndrewV505", "flexGod", "HASH", "Active");
+INSERT INTO t6_user VALUES(45, "Seller", "Jonah", "Caro", "caroanaplayer@icloud.com", "caroj7270", "nanoboost", "HASH", "Active");
+INSERT INTO t6_user VALUES(46, "Seller", "Timothy", "Schindler", "timschin@gmail.com", "schinny", "maintank", "HASH", "Active");
+INSERT INTO t6_user VALUES(47, "Seller", "Kyle", "Mirk", "kylemirk@gmail.com", "mirkyle", "universe", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(48, "Seller", "Jeffery", "Luce", "LuceHLL@gmail.com", "SirJeff", "Jeff131314312", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(47, "Seller", "Kyle", "Mirk", "gwimzirk@gmail.com", "mirkyle", "universe", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(58, "Customer", "Kate", "Hughes", "Huges@gmail.com", "KHuges", "khug829", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(59, "Customer", "Ria", "Javal", "JavalRh@gmail.com", "RiaJavali", "raivlaia", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(60, "Customer", "Rufus", "Luce", "RufusLuce@gmail.com", "Rufus", "rufusispog418", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(61, "Customer", "Gerald", "Finnigan", "Finn131@gmail.com", "GerFinn", "Gerald4141", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(62, "Customer", "Sasha", "Finley", "Finley482@gmail.com", "Sasha", "SashaElusiveFact", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(63, "Customer", "Michael", "Rainor", "Rainor@gmail.com", "RainorRellik", "JRJRJR841", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(64, "Customer", "Hisao", "Tojo", "TojoNanko2189@gmail.com", "TokyoTojo", "HR$$$#SRL", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(65, "Customer", "Alexis", "Morikawa", "AlexisMori@gmail.com", "Almk", "ACMJ5231978", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(66, "Customer", "Lena", "Millers", "MillL@gmail.com", "LMillers", "Millers?4242", "HASH", "Active"); 
+INSERT INTO t6_user VALUES(67, "Customer", "Calen", "Humphrey", "Humphrey5521@gmail.com", "CHumph1", "CHumph51252009", "HASH", "Active"); 
+
 INSERT INTO t6_employee VALUES(6, 56000, CURDATE(), "Bookstore Manager", "Active");
 INSERT INTO t6_employee VALUES(7, 64500, CURDATE(), "Publishing Sales Representative", "Active");
 INSERT INTO t6_employee VALUES(8, 48000, CURDATE(), "Inventory Management Assistant", "Active");
 INSERT INTO t6_employee VALUES(9, 52000, CURDATE(), "Customer Service Representative", "Active");
+INSERT INTO t6_employee VALUES(25, 56000, CURDATE(), "Bookstore Manager", "Active");
+INSERT INTO t6_employee VALUES(26, 64500, CURDATE(), "Publishing Sales Representative", "Active");
+INSERT INTO t6_employee VALUES(27, 38000, CURDATE(), "Social Media Director", "Active");
+INSERT INTO t6_employee VALUES(28, 82000, CURDATE(), "Technical Support Manager", "Active");
+INSERT INTO t6_employee VALUES(29, 56000, CURDATE(), "Bookstore Manager", "Active");
+INSERT INTO t6_employee VALUES(30, 56500, CURDATE(), "Bookstore Manager", "Active");
+INSERT INTO t6_employee VALUES(31, 48000, CURDATE(), "Inventory Management Assistant", "Active");
+INSERT INTO t6_employee VALUES(32, 90000, CURDATE(), "Marketing Director", "Active");
 
 -- Populate customers table.
 
 INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(10, "82 Logan Street, Poughkeepsie, New York", "8453670674", "Active");
 INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(11, "720 Vannella Drive, Qoughpaug, New Jersey", "4582079020", "Active");
-INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(12, "25 Carol Avenue, Poughkeepsie, New York", "8454359020", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(12, "25 Carol Avenue, Poughkeepsie, New York", "41340470", "Active");
 INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(13, NULL, NULL, "Deleted");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(58, "7508 Clark Ave. New York, NY 10009", "70866579", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(59, "851 Belmont Ave. Poughkeepsie, NY 12603", "61039038", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(60, "8142 6th St. Flushing, NY 11355", "17493989", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(61, "35 Wellington Ave. Troy, NY 12180", "18558551", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(62, "8496 N. Cedar St. East Elmhurst, NY 11370", "43513081", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(63, "7388 Kent St. Astoria, NY 11103", "02881022", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(64, "725 Belmont Court Bronx, NY 10452", "39388746", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(65, "94 Rock Maple St. Brooklyn, NY 11218", "51146219", "Active");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(66, NULL, NULL, "Deleted");
+INSERT INTO t6_customer (cus_id, address, payment_phone, status) VALUES(67, NULL, NULL, "Deleted");
 
 -- Populate the sellers table.
 
 INSERT INTO t6_seller VALUES(14, 55, 5.5, "4579790476", "85 Vanilla Rd, Poughkeepsie, New York", 8, "N/A", "Active");
 INSERT INTO t6_seller VALUES(15, 9, 8.5, "8458972469", "92 Oak Drive, Hopewell Jct, New York", 10, "Books always in perfect condition, includes student comments. Very nice!", "Active");
-INSERT INTO t6_seller VALUES(16, 33, 2.2, NULL, NULL, 3, "Books sold are commonly in poor condition.", "Active");
+INSERT INTO t6_seller VALUES(16, 33, 2.2, "8458972469", NULL, 3, "Books sold are commonly in poor condition.", "Active");
+INSERT INTO t6_seller VALUES(40, 53, 3.2, "86590571", "240 Oak Drive, Hopewell Jct, New York", 3, "Books sold are commonly in poor condition.", "Active");
+INSERT INTO t6_seller VALUES(41, 63, 4.2, "46027430", NULL, 3, "Books sold are commonly in poor condition.", "Active");
+INSERT INTO t6_seller VALUES(42, 323, 9.2, "21840859", NULL, 3, "Awesome quality books.", "Active");
+INSERT INTO t6_seller VALUES(43, 133, 1.4, "52132719", NULL, 3, "Books sold are commonly in poor condition.", "Active");
+INSERT INTO t6_seller VALUES(44, 140, 7.8, "77080065", NULL, 3, "Books are commonly sold in great condition.", "Active");
+INSERT INTO t6_seller VALUES(45, 40, 9.0, "04363936", "78 Silver Drive, Fishkill NY", 3, "Keeps books clean and very neat.", "Active");
+INSERT INTO t6_seller VALUES(46, 90, 8.9, "72341598", "8 Melville Avenue, Poughkeepsie, New York", 3, "Books sold are commonly in great condition.", "Active");
+INSERT INTO t6_seller VALUES(47, 21, 1.2, "35354750", NULL, 3, "Books sold are commonly in poor condition.", "Active");
+INSERT INTO t6_seller VALUES(48, 22, 1.0, "03183551", NULL, 3, "Books sold are commonly in poor condition.", "Active");
 
 -- Populate the products table.
 
