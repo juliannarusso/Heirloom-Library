@@ -73,6 +73,7 @@
         <div class="footer">
             <small class="info"><a href=""><u class="email">HeirloomLibSupport@gmail.com</u></a></small>
                 <ul>
+                <?php if (isADMIN) { echo "<li><a href='admin.php'><small><u> Administrator </u></small></a></li>"; } ?>
                 <li><a href="customers.php"><small><u>Customers</u></small></a></li>
                 <li><a href="creatingfaqs.php"><small><u>FAQ</u></small></a></li>
                 <li><a href="disclaimer.php"><small><u>Disclaimer</u></small></a></li>
