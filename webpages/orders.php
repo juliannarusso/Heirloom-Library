@@ -35,7 +35,7 @@
     </head> 
     <body>
         <?php 
-        include "usercheck.php";
+        include "../usercheck.php";
         require "../connect_db.php";
         include "header.php";
         include "error_handler.php";
@@ -105,7 +105,7 @@
         echo "</div>";
     
     
-        if ($isEmployeeAdmin) {
+        if (isEMPLOYEE) {
             #HTML FORMS
             echo "<br><br><br>";
             echo "<form action='' method='POST'>";
@@ -144,8 +144,9 @@
 ?>
             </div>
         </div>
-            <?php echo "<br><br>"; include "footer.php"; ?>
+            
         </header>
     </main>
+    <?php echo "<br><br>"; include "footer.php"; ?>
     </body>
 </html>

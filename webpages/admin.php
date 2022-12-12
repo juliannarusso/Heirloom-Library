@@ -15,7 +15,7 @@
         </style>
     </head> 
     <body>
-        <?php include "header.php"; ?>
+        <?php include "header.php"; include "../usercheck.php"; ?>
 
         <div class="container">
     	    <main>
@@ -42,23 +42,26 @@
                 define ("FILE_AUTHOR", "M. Ong");
                 include "error_handler.php";
 
-                echo "<form action = '' method = 'POST'>";
+                if(isADMIN) {
+                    echo "<form action = '' method = 'POST'>";
 
-                echo "<b style = 'color: rgb(198, 32, 38)'>Admin Options:</b> <select name = 'view'>";
-
-                echo "<option value = 'explain'> View Table Definitions </option>";
-                echo "<option value = 'users'> Show All Users</option>";
-                echo "<option value = 'connection'> Check Database Connection</option>";
-                echo "<option value = 'employees'> View all Employees</option>";
-                echo "</select>";
-            
-                echo "<button style = 'background-color: rgb(240, 193, 208); color: rgb(198, 32, 38); border-color: white;' type='submit'>Submit</button>";
+                    echo "<b style = 'color: rgb(198, 32, 38)'>Admin Options:</b> <select name = 'view'>";
+    
+                    echo "<option value = 'explain'> View Table Definitions </option>";
+                    echo "<option value = 'users'> Show All Users</option>";
+                    echo "<option value = 'connection'> Check Database Connection</option>";
+                    echo "<option value = 'employees'> View all Employees</option>";
+                    echo "</select>";
                 
-                echo "</form>";
+                    echo "<button style = 'background-color: rgb(240, 193, 208); color: rgb(198, 32, 38); border-color: white;' type='submit'>Submit</button>";
+                    
+                    echo "</form>";
+    
+                    if (count($_POST) != 0) {
+                        //echo "<br><br>Input selection is " . $_POST['view'];
+                    } 
+                }
 
-                if (count($_POST) != 0) {
-                    //echo "<br><br>Input selection is " . $_POST['view'];
-                } 
 
             ?>
 

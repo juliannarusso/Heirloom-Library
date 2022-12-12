@@ -7,7 +7,7 @@
     <title>Heirloom Library Home</title>
     <link rel="stylesheet" href="styles.css">
 
-    <?php include "header.php" ?> <!--Adds Header -->
+    <?php include "header.php"; ?> <!--Adds Header -->
 
         <div class="container">
     	    <main>

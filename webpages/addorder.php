@@ -8,8 +8,10 @@
     define("FILE_AUTHOR", "M. Ong");
     include "error_handler.php";
     require "../connect_db.php";
+    require "../usercheck.php";
 
-    echo "
+    if (isADMIN) {
+        echo "
     <form style = 'margin-left: auto; margin-right: auto;' action = '' method = 'POST'>" . "
     <br><table style='border:0px solid black;margin-left:auto;margin-right:auto; width: 45%;'>
         <tr>
@@ -25,7 +27,7 @@
         <td style = 'color: rgb(222, 62, 91);'>Price: <input style = 'border-color: rgb(222, 62, 91); padding-top: 5px; padding-bottom: 5px;' type = 'number' min='0.00' max ='10000.00' step = '0.01'; placeholder = '0.00' name = 'price'></td>
         <td style = 'color: rgb(222, 62, 91);'>Date: <input style = 'border-color: rgb(222, 62, 91); padding-top: 5px; padding-bottom: 5px;' type = 'date' placeholder = 'Date' name = 'orddate'></td>
         </tr>
-        <tr><td style = 'padding-top: 15px;'></td></tr> 
+        <tr><td style = 'padding-top: 15px;'></td></tr>
         <tr>
         <td style = 'color: rgb(222, 62, 91);'>Quantity: <input style = 'border-color: rgb(222, 62, 91); padding-top: 5px; padding-bottom: 5px;' type = 'number' min='1' max='1000' step='1' placeholder = '1' name = 'qty'></td>
         <td><input style = 'border-color: rgb(222, 62, 91); padding-top: 5px; padding-bottom: 5px;' type = 'text' placeholder = 'Status' name = 'status'></td>
@@ -103,6 +105,8 @@
     }
 
     echo "</table>";
+    }
+    
     
     
     

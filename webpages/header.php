@@ -62,7 +62,7 @@
 
     
 </head>
-
+<?php include "../usercheck.php"; ?>
 <body>
 <div class="fixed-header">
             <div class="container1">
@@ -73,7 +73,7 @@
                             <li><a href="products.php" style = "color: rgb(198, 32, 38);">Products</a></li>
                             <li><a href="sellers.php" style = "color: rgb(198, 32, 38);">Sellers</a></li>
                             <li><a href="orders.php" style = "color: rgb(198, 32, 38);">Orders</a></li>
-                            <li><a href="signin.php"><u>Sign In</u></a></li>
+                            <li><a href="signin.php"><u><?php if (isset($_SESSION['login_status'])) { echo "My Account"; } else { echo "Sign In"; } ?></u></a></li>
                         </ul>
                     </div>
                 </header>

@@ -10,7 +10,7 @@
                 word-wrap: break-word;
             }
 
-            form, input[type=radio] {
+            .sortBox form, input[type=radio] {
                 border-radius: 1cm;
                 color:whitesmoke;
                 background-color: indianred;
@@ -21,7 +21,11 @@
                 align-items: center;
             }
 
-            input[type='submit'] {
+            .sortBox input[type=radio] {
+                cursor: pointer;
+            }
+
+            .sortBox input[type='submit'] {
                 border-radius: 1cm;
                 border-color: crimson;
                 background-color: crimson;
@@ -29,13 +33,14 @@
                 color:whitesmoke;
                 margin-left: 10px;
                 padding-right: 15px;
+                cursor: pointer;
             }
 
         </style>
     </head>
     <body>
         
-    <?php include "usercheck.php"; include "header.php"; ?>
+    <?php include "../usercheck.php"; include "header.php"; ?>
 
         <div class="container">
     	    <main>
@@ -100,8 +105,9 @@
     echo "</div>";
 
 
-    if ($isEmployeeAdmin) {
+    if (isEMPLOYEE) {
         #HTML FORMS
+        echo "<div class='sortBox'>";
         echo "<br><br><br>";
         echo "<form action='' method='POST'>";
         echo "<input type = 'radio' name = 'sort' value = 'sell_id' checked> Id";
@@ -116,8 +122,28 @@
         if ($directionInput == " DESC") { echo "<input type = 'radio' name = 'direction' value = 'DESC' checked> Descending"; } else { echo "<input type = 'radio' name = 'direction' value = 'DESC'> Descending";}
         echo "<br><input type='submit' value='Sort It!' >";
         echo "</form>";
+        echo "</div>";
 
         echo "<p><p>";
+
+        # BUTTON TO ACCESS ADD FUNCTIONALITY
+
+        if (isADMIN) {
+            echo "<div class='sortBox'>";
+            echo "<form action='addseller.php' method='POST'>";
+            echo "<input style = 'background: crimson;
+            width: 8cm;
+            height: 40px;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-right: 16px;
+            cursor: pointer;
+            font-weight: bolder;
+            color:whitesmoke;' type='submit' value = 'Manually Add New Seller'>";
+            echo "</div>";
+            echo "</form>";
+            echo "<p><p>";
+        }
     } else {
         echo "<p>";
     }
