@@ -8,8 +8,10 @@
     define("FILE_AUTHOR", "M. Ong");
     include "error_handler.php";
     require "../connect_db.php";
+    require "../usercheck.php";
 
-    echo "
+    if (isADMIN) {
+        echo "
     <form style = 'margin-left: auto; margin-right: auto;' action = '' method = 'POST'>" . "
     <br><table style='border:0px solid black;margin-left:auto;margin-right:auto; width: 45%;'>
         <tr>
@@ -96,6 +98,8 @@
     }
 
     echo "</table>";
+    }
+    
     
     
     
