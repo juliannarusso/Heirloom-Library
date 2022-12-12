@@ -139,7 +139,7 @@
             padding-right: 16px;
             cursor: pointer;
             font-weight: bolder;
-            color:whitesmoke;' type='submit' value = 'Manually Add New Supplier'>";
+            color:whitesmoke;' type='submit' value = 'Manually Add New Seller'>";
             echo "</div>";
             echo "</form>";
             echo "<p><p>";
