@@ -27,6 +27,4 @@
     define("isADMIN", $admin);
     define("isEMPLOYEE", $employee);
 
-    //if (isADMIN || isEMPLOYEE) { define("isCUSTOMER", false); } else { define("isCUSTOMER", true); } //Failsafe declaration, saying if the Account is not an Employee or Admin, then they're a Customer
-
 ?>

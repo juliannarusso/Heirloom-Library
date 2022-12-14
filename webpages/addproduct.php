@@ -10,14 +10,14 @@
     require "../connect_db.php";
     include "footer.php";
 
-    $book_isbn = $title = $book_price = $copyrite = $inv_date = $seller_id = $q = ""; 
+    $book_isbn = $title = $book_price = $copyright = $inv_date = $seller_id = $q = ""; 
 
     # validates the input for userid and outputs an error message if something is wrong
     if (isset($_POST['ISBN']))   { $book_isbn = $_POST['ISBN'];}
     if (isset($_POST['Title'])) { $title = $_POST['Title'];} 
     if (isset($_POST['Price'])) { $book_price = $_POST['Price'];} 
     if (isset($_POST['inventory_date'])) { $inv_date = $_POST['inventory_date'];} 
-    if (isset($_POST['Copyrite'])) { $copyright = $_POST['Copyrite'];} 
+    if (isset($_POST['Copyright'])) { $copyright = $_POST['Copyright'];} 
     if (isset($_POST['book_condition'])) { $condition = $_POST['book_condition'];} 
     if (isset($_POST['status'])) { $status = $_POST['status'];} 
 
@@ -45,8 +45,8 @@
         echo "<br>";
 
         
-        echo "<br> Enter the book's Copyrite";
-        echo "<input type='text' name='Copyrite' value='$copyrite'>";
+        echo "<br> Enter the book's Copyright";
+        echo "<input type='text' name='Copyright' value='$copyright'>";
         echo "<br>";
 
 
