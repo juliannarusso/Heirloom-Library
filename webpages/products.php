@@ -186,9 +186,6 @@
         }
     }
 
-
-    echo "</div>";
-    echo "<br><h4 style = 'text-align: center; text-decoration: none;'><a href='addproduct.php'><u style = 'color: rgb(198, 32, 38); font-size: 17px;'>Manually Add an Order</u></a></h4>";
     echo "</div>";
 
 
@@ -211,6 +208,40 @@
         if ($directionInput == " DESC") { echo "<input type = 'radio' name = 'direction' value = 'DESC' checked> Descending"; } else { echo "<input type = 'radio' name = 'direction' value = 'DESC'> Descending";}
         echo "<br><input type='submit' value='Sort It!' >";
         echo "</form>";
+    }
+
+    echo "<br>"; 
+
+    if (ISSET($_SESSION['active_user'])) {
+        $active_user = $_SESSION['active_user'];
+    }
+    if (ISSET($_SESSION['login_status'])) {
+        $login_status = "LOGGED IN";
+
+        $q = "SELECT user_rank FROM t6_user WHERE username = \"" . $active_user . "\"";
+        // echo $q;
+        $r = mysqli_query($dbc, $q);
+
+        if ($r) {
+            while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+                if ($row[0] == "Admin" || $row[0] == "Employee" || $row[0] == "Seller") {
+                    echo "<p><p><div class='sortBox'>";
+                    echo "<form action='addproduct.php' method='GET'>";
+                    echo "<input style = 'background: crimson;
+                    width: 8cm;
+                    height: 40px;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    padding-right: 16px;
+                    cursor: pointer;
+                    font-weight: bolder;
+                    color:whitesmoke;' type='submit' value = 'Manually Add Product'>";
+                    echo "</div>";
+                    echo "</form>";
+                    echo "<p><p>";                
+                }
+            }
+        }
     }
 
     echo "<br><br><br><br><br>";
